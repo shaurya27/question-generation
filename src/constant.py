@@ -1,12 +1,13 @@
-TRAIN_DATA_PATH = '../data/processed/train_data.json'
+TRAIN_DATA_PATH = '../../data/processed/train_data.json'
 TRAIN_DATA_LENGTH = 70484
-VALID_DATA_PATH = '../data/processed/validation_data.json'
+VALID_DATA_PATH = '../../data/processed/validation_data.json'
 VALID_DATA_LENGTH = 10570
-TEST_DATA_PATH = '../data/processed/test_data.json'
+TEST_DATA_PATH = '../../data/processed/test_data.json'
 TEST_DATA_LENGTH = 11877
 PRE_TRAINED_EMBEDDING_PATH = '../data/glove.840B.300d.txt'
 WORD_DIM = 300
-PRE_TRAINED_EMBEDDING = True
+PRE_TRAINED_EMBEDDING = False
+WORD2VEC_EMBEDDING = True
 WORD_SIZE = None
 NON_TRAINABLE = True
 BATCH_SIZE = 32
