@@ -18,7 +18,7 @@ class Attention(nn.Module):
         if method == 'dot':
             pass
         elif method == 'general':
-            self.Wa = nn.Linear(hidden_size, hidden_size, bias=False)
+            self.Wa = nn.Linear(hidden_size, hidden_size/2, bias=False)
             #self.Wa = nn.Linear(hidden_size, (hidden_size/4), bias=False)
         elif method == "concat":
             self.Wa = nn.Linear(hidden_size, hidden_size, bias=False)
@@ -59,7 +59,7 @@ class Attention(nn.Module):
         elif method == 'general':
             x = self.Wa(last_hidden)
             x = x.unsqueeze(-1)
-            print x.size(),encoder_outputs.size()
+            #print x.size(),encoder_outputs.size()
             return encoder_outputs.bmm(x).squeeze(-1)
 
         elif method == "concat":
